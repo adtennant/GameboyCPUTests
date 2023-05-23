@@ -1,6 +1,6 @@
-# gameboy-test-data
+# sm83-test-data
 
-Test data for developers of Gameboy emulators. These files are designed for unit testing the CPU of the Gameboy and don't require any other hardware components to be implemented.
+Test data for developers of Gameboy emulators. These files are designed for unit testing the CPU of the Gameboy (SM83) in isolation and don't expect any other hardware components to be implemented.
 
 * `alu_tests` - Contains full test data for the 8-bit ALU operations of the Gameboy CPU.
 * `cpu_tests` - Contains randomly generated test data for all Gameboy CPU instructions in the same format as https://github.com/TomHarte/ProcessorTests.
