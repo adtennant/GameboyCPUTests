@@ -9,86 +9,93 @@ The Gameboy's CPU is a custom chip called the Sharp LR35902. The chip is very si
 Sample test:
 ```json
 [
-    {
-        "name": "d1 da ea",
-        "initial": {
-            "a": 173,
-            "b": 29,
-            "c": 30,
-            "d": 182,
-            "e": 58,
-            "f": 192,
-            "h": 244,
-            "l": 78,
-            "pc": 31781,
-            "sp": 37355,
-            "ram": [
-                [
-                    31781,
-                    209
-                ],
-                [
-                    31782,
-                    218
-                ],
-                [
-                    31783,
-                    234
-                ]
-            ]
-        },
-        "final": {
-            "a": 173,
-            "b": 29,
-            "c": 30,
-            "d": 202,
-            "e": 248,
-            "f": 192,
-            "h": 244,
-            "l": 78,
-            "pc": 31782,
-            "sp": 37357,
-            "ram": [
-                [
-                    31781,
-                    209
-                ],
-                [
-                    31782,
-                    218
-                ],
-                [
-                    31783,
-                    234
-                ],
-                [
-                    37355,
-                    248
-                ],
-                [
-                    37356,
-                    202
-                ]
-            ]
-        },
-        "cycles": [
-            [
-                37355,
-                248,
-                "read"
-            ],
-            [
-                37356,
-                202,
-                "read"
-            ],
-            [
-                31781,
-                209,
-                "read"
-            ]
+  {
+    "name": "cd a5 d0",
+    "initial": {
+      "a": 39,
+      "b": 42,
+      "c": 203,
+      "d": 219,
+      "e": 80,
+      "f": 0,
+      "h": 113,
+      "l": 69,
+      "pc": 31709,
+      "sp": 61734,
+      "ram": [
+        [
+          31708,
+          205
+        ],
+        [
+          31709,
+          165
+        ],
+        [
+          31710,
+          208
         ]
-    }
+      ]
+    },
+    "final": {
+      "a": 39,
+      "b": 42,
+      "c": 203,
+      "d": 219,
+      "e": 80,
+      "f": 0,
+      "h": 113,
+      "l": 69,
+      "pc": 53414,
+      "sp": 61732,
+      "ram": [
+        [
+          31708,
+          205
+        ],
+        [
+          31709,
+          165
+        ],
+        [
+          31710,
+          208
+        ],
+        [
+          53413,
+          77
+        ]
+      ]
+    },
+    "cycles": [
+      [
+        31709,
+        165,
+        "read"
+      ],
+      [
+        31710,
+        208,
+        "read"
+      ],
+      null,
+      [
+        61733,
+        123,
+        "write"
+      ],
+      [
+        61732,
+        223,
+        "write"
+      ],
+      [
+        53413,
+        77,
+        "read"
+      ]
+    ]
+  },
 ]
 ```
 
@@ -97,4 +104,4 @@ Sample test:
 | `name`    | Provided for human consumption and has no formal meaning.                                                                                                                 |
 | `initial` | The initial state of the processor; `ram` contains a list of values to store in memory prior to execution, each one in the form `[address, value]`.                       |
 | `final`   | The state of the processor and relevant memory contents after execution.                                                                                                  |
-| `cycles`  | A cycle-by-cycle breakdown of bus activity in the form `[address, value, type]` where type is either `"read"` or `"write"`. Note: Cycles in this case refers to M-cycles. |
+| `cycles`  | An M-cycle breakdown of bus activity in the form `[address, value, type]` where type is either `"read"` or `"write"`. `null` indicates a cycle with no bus activity.      |
