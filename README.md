@@ -9,7 +9,7 @@ Test data for developers of Gameboy emulators. These files are designed for unit
 The main differences between `v2` and `v1` are:
 * The test format now correctly matches https://github.com/TomHarte/ProcessorTests.
 * Register and RAM values are recorded as decimal numbers instead of hexidecimal to make them easier to parse.
-* Tests model the CPU's prefetch so the last cycle is always reading the next opcode. This also means the test start at PC+1 with respect to the running instruction.
+* The tests now assume you're doing a decode-execute-prefetch loop instead of a fetch-decode-execute loop.
 * Improved coverage of `CB` opcodes.
 * Removed `STOP`, `HALT`, `EI`, `DI` as the tests are not meaningful.
 
