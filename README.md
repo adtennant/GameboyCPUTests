@@ -1,4 +1,4 @@
-# Gameboy (Sharp LR35902) Tests
+# Gameboy CPU (Sharp LR35902) Tests
 
 Test data for developers of Gameboy emulators. These files are designed for unit testing the CPU of the Gameboy (Sharp LR35902) in isolation and don't expect any other hardware components to be implemented.
 
