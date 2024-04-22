@@ -2,7 +2,7 @@
 
 The Gameboy's CPU is a custom chip called the Sharp LR35902. The chip is very similar to the much more popular Intel 8080 and the Zilog Z80.
 
-1,000 tests are provided per opcode, which the exception of `0xCB` which has 10,000 tests. All tests assume a full 64KB of uniquely-mapped RAM is mapped to the processor; this deviates from the actual memory layout of a Gameboy.
+100 tests are provided per opcode, which the exception of `0xCB` which has 25,600 tests. All tests assume a full 64KB of uniquely-mapped RAM is mapped to the processor; this deviates from the actual memory layout of a Gameboy.
 
 `STOP`, `HALT`, `EI` and `DI` are currently omitted until I can devise a meaningful way to test their behaviour. 
 
