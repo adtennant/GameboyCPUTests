@@ -1,6 +1,6 @@
-# Gameboy CPU (Sharp LR35902) Tests
+# GameBoy CPU (SM83) Tests
 
-Test data for developers of Gameboy emulators. These files are designed for unit testing the CPU of the Gameboy (Sharp LR35902) in isolation and don't expect any other hardware components to be implemented.
+Test data for developers of Gameboy emulators. These files are designed for unit testing the CPU of the Gameboy (SM83) in isolation and don't expect any other hardware components to be implemented.
 
 * `alu_tests` **(Removed since [c7b4e6a](https://github.com/adtennant/sm83-test-data/commit/c7b4e6a5ee935d0c02dbc655a52b560ac42de392))** - Contains full test data for the 8-bit ALU operations of the Gameboy CPU.
 * `v1` **(Deprecated since [c7b4e6a](https://github.com/adtennant/sm83-test-data/commit/c7b4e6a5ee935d0c02dbc655a52b560ac42de392))** - Contains randomly generated test data for all Gameboy CPU instructions.
